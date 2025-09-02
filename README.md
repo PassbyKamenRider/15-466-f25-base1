@@ -39,5 +39,10 @@ Use `WASD` to move the character. The character automatically fires bullets forw
 ### Objective:
 Survive as long as possible while dodging enemy attacks and eliminating foes.
 
+### Easter Egg🎉:
+Inspired by Helldiver 2, I made a hidden surprise. If your last five inputs are ↑ → ↓ ↓ ↓, all enemies and projectiles will vanish.
+
+![](assets/bomb.jpg)
+
 This game was built with [NEST](NEST.md).
 

@@ -209,6 +209,22 @@ PlayMode::~PlayMode() {
 bool PlayMode::handle_event(SDL_Event const &evt, glm::uvec2 const &window_size) {
 
 	if (evt.type == SDL_EVENT_KEY_DOWN) {
+
+		last_keys.push_back(evt.key.key);
+		if (last_keys.size() > 5) last_keys.erase(last_keys.begin());
+
+		if (last_keys.size() == 5 &&
+			last_keys[0] == SDLK_UP &&
+			last_keys[1] == SDLK_RIGHT &&
+			last_keys[2] == SDLK_DOWN &&
+			last_keys[3] == SDLK_DOWN &&
+			last_keys[4] == SDLK_DOWN) 
+		{
+			enemies1.clear();
+			enemies2.clear();
+			enemy_projectiles.clear();
+		}
+		
 		if (evt.key.key == SDLK_A) {
 			left.downs += 1;
 			left.pressed = true;

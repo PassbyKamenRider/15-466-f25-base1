@@ -92,4 +92,7 @@ struct PlayMode : Mode {
 
 	// Return a vector of tile indices loaded from the png
 	std::vector<int> load_tiles(const std::string &filename, int tile_start, int palette_start);
+
+	// ----- Easter Eggs!!! -----
+	std::vector<SDL_Keycode> last_keys;
 };
